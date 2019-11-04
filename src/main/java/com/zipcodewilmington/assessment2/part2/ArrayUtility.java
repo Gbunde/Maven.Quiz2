@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class ArrayUtility {
-    public Integer[] merge(Integer[] array1, Integer[] array2) {
+    public static Integer[] merge(Integer[] array1, Integer[] array2) {
 
         if (array1 != null && array2 == null) return array1;
         else if (array1 == null && array2 != null) return array2;
@@ -26,7 +26,7 @@ public class ArrayUtility {
         return rotate.toArray(rotated);
     }
 
-    public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
+    public static Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
         Integer[] total = (array2.length > 0) ? merge(array1, array2) : array1;
         Integer occurrences = 0;
         for (int i = 0; i < total.length; i++) {
@@ -35,7 +35,7 @@ public class ArrayUtility {
         return occurrences;
     }
 
-    public Integer mostCommon(Integer[] array) {
+    public static Integer mostCommon(Integer[] array) {
         if (array.length < 1) return null;
         Integer[] empty = new Integer[0];
         Integer maxValue = array[0];
