@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
@@ -10,7 +11,7 @@ import java.util.TreeMap;
 
     public class Router {
 
-        private Map<String, String> map = new TreeMap<>();
+        private Map<String, String> map = new LinkedHashMap<>();
 
         public void add(String path, String controller) {
 
@@ -40,5 +41,14 @@ import java.util.TreeMap;
 
             map.remove(path);
 
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            for (String key : map.keySet()) {
+                sb.append(key + map.get(key) + "\n");
+            }
+            return sb.toString();
         }
     }

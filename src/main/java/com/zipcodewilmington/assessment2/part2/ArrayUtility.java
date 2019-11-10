@@ -39,14 +39,14 @@ public class ArrayUtility {
         if (array.length < 1) return null;
         Integer[] empty = new Integer[0];
         Integer maxValue = array[0];
-        Integer maxCount = countOccurrence(array,empty, maxValue);
-        for (Integer i : array){
+        Integer maxCount = countOccurrence(array, empty, maxValue);
+        for (Integer i : array) {
             Integer occurrences = countOccurrence(array, empty, i);
-        if (occurrences >= maxCount) {
-            maxValue = i;
-            maxCount = occurrences;
+            if (occurrences >= maxCount) {
+                maxValue = i;
+                maxCount = occurrences;
+            }
         }
+        return maxValue;
     }
-    return maxValue;
-}
 }

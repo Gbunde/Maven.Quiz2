@@ -1,6 +1,6 @@
 package com.zipcodewilmington.assessment2.part3;
 
-public class RedRobin extends Bird {
+public class RedRobin extends Bird implements Animal {
     private String migrationMonth;
     public String getMigrationMonth(){
         return migrationMonth;
